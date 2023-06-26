@@ -1,0 +1,308 @@
+body{
+    width: 100vw;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    overflow-x:hidden ;
+}
+header{
+    width: 100%;
+    position: fixed;
+    top: -10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: mediumpurple;
+    z-index: 99;
+    border-bottom: 5px solid white;
+}
+.logo{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left: 100px;
+    color: red;
+    user-select: none;
+}
+.navigation a{
+    position: relative;
+    top: 40px;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    background: transparent;
+    transition: .5s;
+    right: 100px;
+}
+.navigation a:nth-child(1){
+    position: relative;
+    margin-left: 500px;
+    border: 1px solid greenyellow;
+    background-color: greenyellow;
+    color: grey;
+    border-radius: 10px;
+}
+.navigation a:nth-child(2){
+    position: relative;
+    border: 1px solid deepskyblue;
+    background-color: deepskyblue;
+    border-radius: 10px;
+}
+.navigation a:nth-child(3){
+    position: relative;
+    border: 1px solid yellow;
+    background-color: yellow;
+    border-radius: 10px;
+    color: grey;
+}
+.navigation a:hover,
+.navigation a.active{
+    color: #333;
+}
+.navigation a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 30px;
+    z-index: -1;
+    transform: scale(0);
+    opacity: 0;
+    transition: .5s;
+}
+.navigation a:hover span,
+.navigation a.active span{
+    transform: scale(1);
+    opacity: 1;
+}
+.navigation a:nth-child(1):hover{
+    color: darkorange;
+}
+.navigation a:nth-child(3):hover{
+    color: deepskyblue;
+}
+.select{
+    width: 80vw;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.select .search input{
+    position: relative;
+    width: 600px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 15px;
+    left: 25%;
+    top: 10px;
+    border-color: mediumpurple;
+}
+.select .search ion-icon{
+    position: relative;
+    top: 25px;
+    left: 250px;
+    font-size: 40px;
+    color: mediumpurple;
+    cursor: pointer;
+}
+.select .icons ul{
+    position: relative;
+    display: flex;
+    left: 10%;
+    top: 50px;
+}
+.select .icons li{
+    width: 75px;
+    height: 75px;
+    position: relative;
+    display: flex;
+    margin: 30px;
+    cursor: pointer;
+}
+.select .icons li h1{
+    font-size: 15px;
+    position: relative;
+    top: 70px;
+    left: -60px;
+}
+.select .icons h2{
+    font-size: 15px;
+    position: relative;
+    top: 50px;
+    left: 180px;
+    color: mediumpurple;
+}
+.select .icons li:hover{
+    color: mediumpurple;
+    transform: translateY(-5px);
+}
+.img{
+    position: relative;
+    width: 200vw;
+    display: flex;
+    overflow: hidden;
+    animation-name: img-slider;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    /*animation-timing-function: linear;*/
+    animation-direction: alternate-reverse;
+}
+#mainImg{
+    position: relative;
+    top: 5px;
+    width: 100vw;
+    height: 350px;
+    background: url("assets/blog-24jun18-header.jpg")no-repeat;
+    background-size: cover;
+}
+#mainImg2{
+    position: relative;
+    top: 5px;
+    width: 100vw;
+    height: 340px;
+    background: url("assets/e498ac8a93ed5705ffd311fb3aecb34e-566973.jpeg")no-repeat;
+    background-size: cover;
+}
+@keyframes img-slider {
+
+    0%,25% {
+        transform: translateX(-50%);
+    }
+    25%,50% {
+        transform: translateX(-50%);
+    }
+    50%,75% {
+        transform: translateX(0%);
+    }
+    75%,100% {
+        transform: translateX(0%);
+    }
+}
+.homePage{
+    /*display: none;*/
+}
+#homeButton{
+    width: 100px;
+    height: 30px;
+    position: relative;
+    top: 40px;
+    border-radius: 5px;
+    border: transparent;
+    font-size: 1.1em;
+    left: -50px;
+    background-color: grey;
+    color: white;
+}
+.car{
+    display: none;
+}
+.car .carPgeImg{
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 250px;
+    background: url("assets/car section/img.png")no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.car .carPgeImg2{
+    position: relative;
+    top: 120px;
+    width: 100%;
+    height: 150px;
+    border: 1px solid red;
+}
+.car .details{
+    position: relative;
+    width: 70%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.car .feilds .carDetails{
+    position: relative;
+    top: 130px;
+    width: 70%;
+    height: 200px;
+    border: 3px solid mediumpurple;
+    border-radius: 10px;
+}
+.carDetails{
+    margin: 30px;
+    display: flex;
+}
+.carDetails .carImg{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 250px;
+    height: 180px;
+    border-radius: 5px;
+}
+.carDetails .carDesc{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 250px;
+    height: 180px;
+}
+.carDetails .carPrice{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 230px;
+    height: 180px;
+}
+.carDetails:nth-child(1) .carImg{
+    background: url("assets/car section/car_SriLanka_orig.jpg")no-repeat;
+    background-size: cover;
+}
+.carDetails:nth-child(2) .carImg{
+    background: url("assets/car section/toyota-premio-l.jpg")no-repeat;
+    background-size: cover;
+}
+.carDetails h1{
+    position: relative;
+    left: 10px;
+    font-size: 1.2em;
+}
+.carDetails h2{
+    position: relative;
+    left: 10px;
+    top: -10px;
+    font-size: 0.8em;
+}
+.carDetails h3{
+    position: relative;
+    left: 10px;
+    font-size: 1.4em;
+}
+.carDetails p{
+    position: relative;
+    left: 10px;
+    font-size: 0.8em;
+}
+.carPrice button{
+    width: 100%;
+    height: 30px;
+    color: white;
+    background-color: mediumpurple;
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.carPrice button>ion-icon{
+    position: relative;
+    top: 2px;
+    left: -20px;
+}
